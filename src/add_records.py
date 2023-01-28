@@ -7,7 +7,7 @@ from src.util import bq_client, read_query, render_template
 
 
 def get_target_dataset(region: str) -> Iterator[str]:
-    source = read_query("sql/get_target_datasets.sql")
+    source = read_query("src/sql/get_target_datasets.sql")
     params = {"region": region}
     query = render_template(source=source, params=params)
     query_job = bq_client.query(query=query)
@@ -16,7 +16,7 @@ def get_target_dataset(region: str) -> Iterator[str]:
 
 
 def add_records(history_dataset: str, region: str) -> None:
-    source = read_query("sql/add_records.sql")
+    source = read_query("src/sql/add_records.sql")
     for target_dataset in get_target_dataset(region=region):
         params = {
             "history_dataset": history_dataset,

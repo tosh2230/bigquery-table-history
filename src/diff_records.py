@@ -6,7 +6,7 @@ from src.util import bq_client, read_query, render_template
 
 
 def diff_records(history_dataset: str, base_date: str) -> None:
-    source = read_query("sql/diff_records.sql")
+    source = read_query("src/sql/diff_records.sql")
     params = {
         "history_dataset": history_dataset,
         "base_date": base_date,
