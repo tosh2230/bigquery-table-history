@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "bigquery-table-history"
+version = "0.1.0"
+description = "BigQuery Table History"
+authors = ["tosh2230 <rev.to12@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.7,<3.11"
+Jinja2 = ">=2.10.3"
+google-cloud-bigquery = "^3.4.2"
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+flake8 = "^4.0.1"
+isort = "^5.9.3"
+mypy = "^0.961"
+pytest = "^7.2.0"
+pytest-cov = "^4.0.0"
+pytest-mock = "^3.8.1"
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+check_untyped_defs = true
+ignore_missing_imports = true
+no_strict_optional = true
+namespace_packages = true
+explicit_package_bases = true
+
+[tool.pytest.ini_options]
+addopts = "-rsxX -l --strict-markers"
+norecursedirs = "*.egg .* _darcs build CVS dist node_modules venv {arch} src"
+xfail_strict = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

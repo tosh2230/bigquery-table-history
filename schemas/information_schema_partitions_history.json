@@ -1,0 +1,42 @@
+[
+  {
+    "name": "recorded_at",
+    "type": "TIMESTAMP"
+  },
+  {
+    "name": "table_catalog",
+    "type": "STRING"
+  },
+  {
+    "name": "table_schema",
+    "type": "STRING"
+  },
+  {
+    "name": "table_name",
+    "type": "STRING"
+  },
+  {
+    "name": "partition_id",
+    "type": "STRING"
+  },
+  {
+    "name": "total_rows",
+    "type": "INTEGER"
+  },
+  {
+    "name": "total_logical_bytes",
+    "type": "INTEGER"
+  },
+  {
+    "name": "total_billable_bytes",
+    "type": "INTEGER"
+  },
+  {
+    "name": "last_modified_time",
+    "type": "TIMESTAMP"
+  },
+  {
+    "name": "storage_tier",
+    "type": "STRING"
+  }
+]

@@ -1,0 +1,4 @@
+SELECT
+    SCHEMA_NAME
+FROM
+    region-{{ region }}.INFORMATION_SCHEMA.SCHEMATA
